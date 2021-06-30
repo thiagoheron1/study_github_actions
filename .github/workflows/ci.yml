@@ -24,6 +24,9 @@ jobs:
       - name: Instala as dependências
         run: poetry install
 
+      - name: Executa o black
+        run: poetry run black --check app
+
       - name: Executa o isort
         run: poetry run isort --check app
 
